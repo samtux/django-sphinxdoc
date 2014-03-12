@@ -23,7 +23,7 @@ from sphinxdoc.forms import ProjectSearchForm
 from sphinxdoc.models import Project, Document
 
 
-BUILDDIR = getattr(settings, 'SPHINXDOC_BUILD_DIR', os.path.join('_build', 'json'))
+BUILDDIR = os.path.join(getattr(settings, 'SPHINXDOC_BUILD_DIR', '_build'), 'json')
 CACHE_MINUTES = getattr(settings, 'SPHINXDOC_CACHE_MINUTES', 5)
 
 
